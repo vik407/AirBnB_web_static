@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 		'!./src/partials/_*.pug',
 	),
 	sourceCssFiles = Array(
-		'./src/*.scss'
+		'./src/styles/*.scss'
 	);
 // Add the sass compiler
 sass.compiler = require('node-sass');
@@ -44,8 +44,8 @@ gulp.task('html', function(){
 	return gulp.src(sourceCssFiles)
 	  .pipe(sass().on('error', sass.logError))
 	  .pipe(plumber())
-	  .pipe(changed('./build/css'))
-	  .pipe(gulp.dest('./build/css'))
+	  .pipe(changed('./build/styles'))
+	  .pipe(gulp.dest('./build/styles'))
 	  .pipe(browserSync.stream({ match: "**/*.css" }))
 });
 /** main function defatult
