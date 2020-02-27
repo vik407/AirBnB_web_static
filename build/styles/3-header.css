@@ -1,0 +1,14 @@
+header {
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #CCCCCC; }
+
+header > h1.logo {
+  background: transparent url("../images/logo.png") no-repeat left top;
+  display: block;
+  width: 142px;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 5px;
+  text-indent: -999em; }
