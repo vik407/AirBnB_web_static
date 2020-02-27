@@ -1,0 +1,25 @@
+{
+  "name": "airbnb_webstatic",
+  "version": "1.0.0",
+  "description": "A barebone wokflow to do Holberton's AirBnB web static project",
+  "main": "0-index.html",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "gulp",
+    "browsersync",
+    "sass"
+  ],
+  "author": "Victor Hernandez <victor.hernandez@holbertonschool.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
