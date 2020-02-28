@@ -15,3 +15,5 @@
     border: none;
     border-radius: 4px;
     margin-right: 30px; }
+  .filters button:hover {
+    opacity: 0.9; }

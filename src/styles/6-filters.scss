@@ -27,6 +27,8 @@ $button-height: 48px;
 	.locations, .amenities{
 		height: 100%;
 		width: 25%;
+		position: relative;
+		display: block;
 		padding-left: 30px;
 		text-align: left;
 		float: left;
@@ -40,5 +42,41 @@ $button-height: 48px;
 		h4{
 			font-weight: 400;
 		}
+		ul.popover, ul.popover ul{
+			background-color: #FAFAFA;
+			list-style: none;
+			margin: 0;
+		}
+		ul.popover{
+			position: absolute;
+			visibility: collapse;
+			display: block;
+			padding: 30px 0;
+			width: 100%;
+			left: 0;
+			top: $filters-height;
+			border: 1px solid #DDDDDD;
+			border-radius: 4px;
+			h2{
+				margin: 5px 0;
+			}
+			>li{
+				margin-left: 30px;
+			}
+			>li>ul{
+				padding-left: 20px;
+			}
+			>li>ul>li{
+				padding: 5px 0
+			}
+		}
+	}
+	.amenities{
+		ul.popover>li{
+			padding: 5px 0
+		}
+	}
+	.locations:hover>.popover, .amenities:hover>.popover{
+		visibility: visible;
 	}
 }

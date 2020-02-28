@@ -15,12 +15,14 @@
     border: none;
     border-radius: 4px;
     margin-right: 30px; }
+  .filters button:hover {
+    opacity: 0.9; }
   .filters .locations {
     border-right: 1px solid #DDDDDD; }
   .filters .locations, .filters .amenities {
     height: 100%;
     width: 25%;
-    padding-left: 5%;
+    padding-left: 30px;
     text-align: left;
     float: left; }
     .filters .locations h3, .filters .locations h4, .filters .amenities h3, .filters .amenities h4 {
