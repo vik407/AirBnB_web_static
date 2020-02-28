@@ -42,7 +42,7 @@ gulp.task('html', function(){
   // The Sass generate CSS files
   gulp.task('css', function(done){
 	return gulp.src(sourceCssFiles)
-	  .pipe(sass().on('error', sass.logError))
+	  .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 	  .pipe(plumber())
 	  .pipe(changed('./build/styles'))
 	  .pipe(gulp.dest('./build/styles'))
