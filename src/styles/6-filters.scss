@@ -57,6 +57,7 @@ $button-height: 48px;
 			top: $filters-height;
 			border: 1px solid #DDDDDD;
 			border-radius: 4px;
+			z-index: 1;
 			h2{
 				margin: 5px 0;
 			}

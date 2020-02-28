@@ -1,0 +1,84 @@
+html
+	head
+		title AirBnB clone
+		link(rel="stylesheet" type="text/css" href="styles/4-common.css")
+		link(rel="stylesheet" type="text/css" href="styles/3-header.css")
+		link(rel="stylesheet" type="text/css" href="styles/6-filters.css")
+		link(rel="stylesheet" type="text/css" href="styles/8-places.css")
+		link(rel="stylesheet" type="text/css" href="styles/3-footer.css")
+		link(rel='shortcut icon' type='image/x-icon' href='images/icon.png')
+	body
+		header
+			h1.logo AirBnB clone
+		.container
+			section.filters
+				button Search
+				.locations
+					h3 States
+					h4 California, Arizona...
+					ul.popover
+						li
+							h2 Arizona:
+							ul
+								li Page
+								li Page2
+						li
+							h2 California:
+							ul
+								li San Francisco
+								li Los Altos
+				.amenities
+					h3 Amenities
+					h4 Internet, Kitchen...
+					ul.popover
+						li Internet
+						li TV
+						li Kitchen
+						li Iron
+			section.places
+				h1 Places
+				article
+					h2 My home
+					.price_by_night
+						|$50
+					.information
+						.max_guest
+							| 2 Guests
+						.number_rooms
+							| 1 Bedroom
+						.number_bathrooms
+							| 1 Bathroom
+					.user Owner: John Doe
+					.description
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+				article
+					h2 Tiny house
+					.price_by_night
+						|$30
+					.information
+						.max_guest
+							| 2 Guests
+						.number_rooms
+							| 1 Bedroom
+						.number_bathrooms
+							| 1 Bathroom
+					.user Owner: John Doe
+					.description
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				article
+					h2 A suite
+					.price_by_night
+						|$100
+					.information
+						.max_guest
+							| 2 Guests
+						.number_rooms
+							| 1 Bedroom
+						.number_bathrooms
+							| 1 Bathroom
+					.user Owner: John Doe
+					.description
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		footer
+			p Holberton School
