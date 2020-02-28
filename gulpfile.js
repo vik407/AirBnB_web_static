@@ -4,6 +4,8 @@ var gulp = require('gulp'),
 	pug = require('gulp-pug'),
 	changed = require('gulp-changed'),
 	plumber = require('gulp-plumber'),
+	prettyHtml = require('gulp-pretty-html'),
+	exec = require('gulp-exec'),
 	sass  = require('gulp-sass'),
 	browserSync = require('browser-sync').create(),
 	clean = require('gulp-clean'),
@@ -15,6 +17,11 @@ var gulp = require('gulp'),
 	sourceHtmlFiles = Array(
 		'./src/*.pug',
 		'!./src/partials/_*.pug',
+	),
+	validateFiles = Array(
+		'./build/**/*.html',
+		'./build/**/*.css',
+		'!./build/images/*',
 	),
 	sourceCssFiles = Array(
 		'./src/styles/*.scss'
@@ -36,7 +43,10 @@ gulp.task('clean', function () {
 gulp.task('html', function(){
 	return gulp.src(sourceHtmlFiles)
 	  .pipe(plumber())
-	  .pipe(pug({pretty: true}))
+	  .pipe(pug({doctype: 'html'}))
+	  .pipe(prettyHtml({
+		indent_size: 4,
+		indent_char: ' '}))
 	  .pipe(gulp.dest('./build'));
   });
   // The Sass generate CSS files
@@ -48,6 +58,20 @@ gulp.task('html', function(){
 	  .pipe(gulp.dest('./build/styles'))
 	  .pipe(browserSync.stream({ match: "**/*.css" }))
 });
+gulp.task('w3c', function() {
+	var options = {
+	  continueOnError: true, // default = false, true means don't emit error event
+	  pipeStdout: false, // default = false, true means stdout is written to file.contents
+	};
+	var reportOptions = {
+		err: true, // default = true, false means don't write err
+		stderr: false, // default = true, false means don't write stderr
+		stdout: true // default = true, false means don't write stdout
+	};
+	return gulp.src(validateFiles)
+	  .pipe(exec('python3 w3c_validator.py <%= file.path %>', options))
+	  .pipe(exec.reporter(reportOptions));
+  });
 /** main function defatult
 */
 gulp.task("default",  gulp.parallel("html", "css",
