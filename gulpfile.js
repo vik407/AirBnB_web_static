@@ -39,6 +39,23 @@ gulp.task('clean', function () {
 		.pipe(plumber())
 		.pipe(clean());
 });
+// Move the build to the repo
+// Move Assets to build
+gulp.task('movebuild', function () {
+	var dest = '../AirBnB_clone/web_static', nSrc=0, nDes=0;
+	return gulp.src('./build/**/*')
+	  .on("data", function() { nSrc+=1;})
+	  .pipe(plumber())
+	  .pipe(changed(dest))
+	  .pipe(gulp.dest(dest))
+  
+	  .on("data", function() { nDes+=1;})
+	  .on("finish", function() {
+		  console.log("Results for ../AirBnB_clone/web_static");
+		  console.log("# src files: ", nSrc);
+		  console.log("# dest files:", nDes);
+	  });
+});
 // The HTML folder
 gulp.task('html', function(){
 	return gulp.src(sourceHtmlFiles)
@@ -84,6 +101,6 @@ gulp.task("default",  gulp.parallel("html", "css",
 	});
 	// Check for source changes
 	gulp.watch(watch.css, gulp.series("css"));
-	gulp.watch(watch.html, gulp.parallel("html")).on('change', browserSyncReload);
+	gulp.watch(watch.html, gulp.parallel("html","movebuild")).on('change', browserSyncReload);
   }
 ));

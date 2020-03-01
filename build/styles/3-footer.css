@@ -1,5 +1,10 @@
+/* Footer styles used in:
+ * 3-index.html
+ */
+/* Footer Style */
 footer {
-  position: absolute;
+  position: fixed;
+  display: inline-block;
   bottom: 0;
   background-color: white;
   text-align: center;
@@ -8,6 +13,7 @@ footer {
   height: 60px;
 }
 
+/* Style for Footer's next p level. */
 footer > p {
   line-height: 60px;
   margin: 0;

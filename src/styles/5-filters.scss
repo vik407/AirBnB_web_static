@@ -1,5 +1,9 @@
+/* Filter styles
+ */
 $filters-height: 70px;
 $button-height: 48px;
+
+/* Filter style */
 .filters{
 	background-color: white;
 	height: $filters-height;
@@ -14,7 +18,7 @@ $button-height: 48px;
 		height: $button-height;
 		margin-top: ($filters-height - $button-height) / 2;
 		width: 20%;
-		border: none;
+		border-style: none;
 		border-radius: 4px;
 		margin-right: 30px;
 	}

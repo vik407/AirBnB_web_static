@@ -1,3 +1,7 @@
+/* Header styles used in:
+ * 3-index.html
+ */
+/* Header Style */
 header {
   background-color: white;
   width: 100%;
@@ -5,6 +9,7 @@ header {
   border-bottom: 1px solid #CCCCCC;
 }
 
+/* Header Logo */
 header > h1.logo {
   background: transparent url("../images/logo.png") no-repeat left top;
   display: block;
