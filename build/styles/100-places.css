@@ -23,7 +23,7 @@ section.places article {
   text-align: center;
 }
 
-section.places article h2 {
+section.places article > h2 {
   font-size: 30px;
   margin-bottom: 40px;
 }
@@ -82,4 +82,58 @@ article .user {
 
 article .description {
   margin-top: 5px;
+}
+
+article .amenities, article .reviews {
+  margin-top: 40px;
+  text-align: left;
+}
+
+article .amenities > h2, article .reviews > h2 {
+  font-size: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+article .amenities > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+article .amenities > ul > li {
+  display: block;
+  line-height: 30px;
+  text-indent: 35px;
+  margin: 10px 0;
+}
+
+article .amenities > ul .pet {
+  background: transparent url("../images/icon_pets.png") no-repeat top left;
+  background-size: 30px;
+}
+
+article .amenities > ul .tv {
+  background: transparent url("../images/icon_tv.png") no-repeat top left;
+  background-size: 30px;
+}
+
+article .amenities > ul .wifi {
+  background: transparent url("../images/icon_wifi.png") no-repeat top left;
+  background-size: 30px;
+}
+
+article .reviews > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+article .reviews > ul > li h3 {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+article .reviews > ul > li p {
+  font-size: 12px;
+  margin-top: 6px;
 }

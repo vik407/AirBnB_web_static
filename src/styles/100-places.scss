@@ -19,7 +19,7 @@ section.places{
 		border: 1px solid #FF5A5F;
 		border-radius: 4px;
 		text-align: center;
-		h2{
+		> h2{
 			font-size: 30px;
 			margin-bottom: 40px;
 		}
@@ -74,5 +74,55 @@ article{
 	}
 	.description{
 		margin-top: 5px;
+	}
+	.amenities, .reviews{
+		margin-top: 40px;
+		text-align: left;
+		> h2{
+			font-size: 16px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #DDDDDD;
+		}
+	}
+	.amenities{
+		> ul{
+			list-style: none;
+			padding-left: 0;
+			> li{
+				display: block;
+				line-height: 30px;
+				text-indent: 35px;
+				margin: 10px 0;
+			}
+			.pet{
+				background: transparent url('../images/icon_pets.png') no-repeat top left;
+				background-size: 30px;
+			}
+			.tv{
+				background: transparent url('../images/icon_tv.png') no-repeat top left;
+				background-size: 30px;
+			}
+			.wifi{
+				background: transparent url('../images/icon_wifi.png') no-repeat top left;
+				background-size: 30px;
+			}
+		}
+	}
+	.reviews{
+		> ul{
+			list-style: none;
+			padding-left: 0;
+		}
+		> ul > li{
+			h3{
+				font-size: 14px;
+				margin: 0;
+				padding: 0;
+			}
+			p{
+				font-size: 12px;
+				margin-top: 6px;
+			}
+		}
 	}
 }

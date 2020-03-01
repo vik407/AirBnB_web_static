@@ -5,7 +5,7 @@ html(lang="en")
 		link(rel="stylesheet" type="text/css" href="styles/4-common.css")
 		link(rel="stylesheet" type="text/css" href="styles/3-header.css")
 		link(rel="stylesheet" type="text/css" href="styles/6-filters.css")
-		link(rel="stylesheet" type="text/css" href="styles/8-places.css")
+		link(rel="stylesheet" type="text/css" href="styles/100-places.css")
 		link(rel="stylesheet" type="text/css" href="styles/3-footer.css")
 		link(rel='shortcut icon' type='image/x-icon' href='images/icon.png')
 	body
@@ -38,57 +38,45 @@ html(lang="en")
 						li Iron
 			section.places
 				h1 Places
-				article
-					h2 My home
-					.price_by_night
-						|$50
-					.information
-						.max_guest
-							| 2 Guests
-						.number_rooms
-							| 1 Bedroom
-						.number_bathrooms
-							| 1 Bathroom
-					.user
-						b Owner: John Doe
-					.description
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				each val in ["Tiny Place", "My Room", "Suite"]
+					article
+						h2= val
+						.price_by_night
+							|$30
+						.information
+							.max_guest
+								| 2 Guests
+							.number_rooms
+								| 1 Bedroom
+							.number_bathrooms
+								| 1 Bathroom
+						.user
+							b Owner: John Doe
+						.description
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						.amenities
+							h2
+								|Amenities
+							ul
+								li.pet Pet Friendly
+								li.tv TV
+								li.wifi Wi-Fi
+						.reviews
+							h2
+								|3 Reviews
+							ul
+								li
+									h3 From Bob Dylan the 27th January 2017
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								li
+									h3 From Keith Moon the 2th January 2018
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								li
+									h3 From David Guilmore the 3th March 2017
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-				article
-					h2 Tiny house
-					.price_by_night
-						|$30
-					.information
-						.max_guest
-							| 2 Guests
-						.number_rooms
-							| 1 Bedroom
-						.number_bathrooms
-							| 1 Bathroom
-					.user
-						b Owner: John Doe
-					.description
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					.amenities
-						h2 Amenities
-						ul
-							li.pet Pet Friendly
-							li.tv TV
-							li.wifi Wi-Fi
-				article
-					h2 A suite
-					.price_by_night
-						|$99
-					.information
-						.max_guest
-							| 2 Guests
-						.number_rooms
-							| 1 Bedroom
-						.number_bathrooms
-							| 1 Bathroom
-					.user
-						b Owner: John Doe
-					.description
-						| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		footer
 			p Holberton School
