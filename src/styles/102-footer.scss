@@ -1,0 +1,19 @@
+$footer-height: 60px;
+/* Footer styles used in:
+ */
+
+/* Footer Style */
+footer{
+	display: inline-block;
+	background-color:white;
+	text-align:center;
+	border-top: 1px solid #CCCCCC;
+	width: 100%;
+	height: $footer-height;
+}
+
+/* Style for Footer's next p level. */
+footer>p{
+	line-height:$footer-height;
+	margin:0;
+}

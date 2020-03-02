@@ -1,0 +1,42 @@
+/* Common styles */
+// Defining values
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+/* Body Style */
+body{
+	margin:0;
+	padding:0;
+	color: #484848;
+	font-size: 14px;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	height: 100%;
+}
+
+/* Container styles */
+.container{
+	@media (max-width: $screen-xs-max){
+		
+	}
+	@media (min-width: $screen-sm-min){
+
+	}
+	@media (max-width: $screen-sm-max){
+
+	}
+	@media (min-width: $screen-md-min){
+
+	}
+	@media (max-width: $screen-md-max){
+
+	}
+	@media (min-width: $screen-lg-min){
+		max-width: 1000px;
+	}
+	margin: 30px auto;
+	padding-bottom: 60px;
+}

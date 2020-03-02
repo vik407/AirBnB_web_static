@@ -1,0 +1,84 @@
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		title AirBnB clone
+		link(rel="stylesheet" type="text/css" href="styles/102-common.css")
+		link(rel="stylesheet" type="text/css" href="styles/102-header.css")
+		link(rel="stylesheet" type="text/css" href="styles/102-filters.css")
+		link(rel="stylesheet" type="text/css" href="styles/102-places.css")
+		link(rel="stylesheet" type="text/css" href="styles/102-footer.css")
+		link(rel='shortcut icon' type='image/x-icon' href='images/icon.png')
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+	body
+		header
+			h1.logo AirBnB clone
+		.container
+			section.filters
+				button Search
+				.locations
+					h3 States
+					h4 California, Arizona...
+					ul.popover
+						li
+							h2 Arizona:
+							ul
+								li Page
+								li Page2
+						li
+							h2 California:
+							ul
+								li San Francisco
+								li Los Altos
+				.amenities
+					h3 Amenities
+					h4 Internet, Kitchen...
+					ul.popover
+						li Internet
+						li TV
+						li Kitchen
+						li Iron
+			section.places
+				h1 Places
+				each val in ["Tiny Place", "My Room", "Suite"]
+					article
+						.flex-row.flex-space-between
+							h2= val
+							.price_by_night
+								|$30
+						.information.flex-row.flex-space-around
+							.max_guest
+								| 2 Guests
+							.number_rooms
+								| 1 Bedroom
+							.number_bathrooms
+								| 1 Bathroom
+						.user
+							b Owner: John Doe
+						.description
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						.amenities
+							h2
+								|Amenities
+							ul
+								li.pet Pet Friendly
+								li.tv TV
+								li.wifi Wi-Fi
+						.reviews
+							h2
+								|3 Reviews
+							ul
+								li
+									h3 From Bob Dylan the 27th January 2017
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								li
+									h3 From Keith Moon the 2th January 2018
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								li
+									h3 From David Guilmore the 3th March 2017
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+		footer
+			p Holberton School
